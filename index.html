@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Lucro - App Landing Page</title>
+  <title>Logbird - Event Catcher For Modern Cloud</title>
 
   <!---Font Icon-->
   <link href="static/plugin/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
@@ -13,10 +13,9 @@
   <!-- / -->
 
   <!-- Plugin CSS -->
-  <link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
   <link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet">
-
   <!-- / -->
 
   <!-- Theme Style -->
@@ -25,7 +24,7 @@
   <!-- / -->
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" />
+  <!-- <link rel="icon" href="favicon.ico" /> -->
   <!-- / -->
 </head>
 
@@ -100,9 +99,9 @@
     <!-- Featre -->
     <section id="feature" class="section">
       <div class="container">
-        <div class="row m-45px-b md-m-25px-b">
+        <div class="row">
           <div class="col-md-8 mx-auto">
-            <p class='text-center h6 '>Send your cloud logs here and we detect events you'll want to know of. Our filters recognise runtime errors, service failures like AWS Lambda timeouts, bad API Gateway requests and any custom event you need to track. You can observe events in our platform or pipe them forward to services like SNS, webhooks, e-mail, Slack.</p>
+            <p class='text-center' style='font-size: 14pt;'>Send your cloud logs here and we detect events you'll want to know of. Our filters recognise runtime errors, service failures like AWS Lambda timeouts, bad API Gateway requests and any custom event you need to track. You can observe events in our platform or pipe them forward to services like SNS, webhooks, e-mail, Slack.</p>
           </div> <!-- col -->
         </div> <!-- row -->
 
@@ -157,7 +156,7 @@
               <p class='text-center pt-1 text-bold'>Lightsail</p>
             </div>
             <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/Aurora.png'>
+              <img src='static/img/icons/aurora.png'>
               <p class='text-center pt-1 text-bold'>Aurora</p>
             </div>
             <div class='col-auto' style='width:110px;'>
@@ -244,7 +243,7 @@
     <!-- / -->
 
     <!-- Price Table -->
-    <section id="price" class="section gray-bg">
+    <section id="price" class="d-none section gray-bg">
       <div class="container">
 
         <div class="tab-style-2">
@@ -266,7 +265,7 @@
                             <!-- <h4 class="price-title">Managed</h4> -->
                             <div class="price-price">
                               <div class="price-value theme-color">5<sup>$</sup> per <small>10k events</small></div>
-                              <p>First 100k events free</p>
+                              <p>First 10k events free</p>
                             </div>
                           </div>
                           <div class="price-body">
@@ -380,7 +379,7 @@
     <!-- / -->
 
     <!-- Contact uss -->
-    <section id="contatus" class="section">
+    <section id="contatus" class="section gray-bg">
       <div class="container">
         <div class="row m-45px-b md-m-25px-b">
           <div class="col-md-12">
@@ -426,38 +425,39 @@
             </div>
 
           </div>
+
           <div class="col-lg-8 col-md-7 md-m-30px-t">
             <div class="contact-form">
-              <form class="contactform p-30px" method="post">
+              <form action="https://dashbird.us20.list-manage.com/subscribe/post?u=54381174f1c5feba22dbecd77&amp;id=a828a060af" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate contactform p-30px" target="_blank" novalidate>
                 <h2 class="text-center m-0px m-20px-b">Register for early access</h2>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input name="name" type="text" placeholder="Name" class="form-control" required="">
+                      <input type="email" placeholder="Email" name="EMAIL" class="form-control required email" id="mce-EMAIL">
                       <span class="input-focus-effect"></span>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="email" placeholder="Email" name="email" class="form-control" required="">
+                      <input type="text" placeholder="Your name" name="NAME" class="form-control required" id="mce-NAME">
                       <span class="input-focus-effect"></span>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <input type="text" placeholder="Subject" name="Subject" class="form-control" required="">
+                      <input type="text" placeholder="Company (optional)" value="" name="COMPANY" class="form-control" id="mce-COMPANY">
                       <span class="input-focus-effect"></span>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <textarea placeholder="Your Comment" name="message" class="form-control" required=""></textarea>
+                      <textarea placeholder="Questions? (optional)" id="mce-QUESTIONS" name="QUESTIONS" class="form-control" required=""></textarea>
                       <span class="input-focus-effect"></span>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="send">
-                      <button class="m-btn m-btn-theme btn-block" type="submit" name="send"> Send</button>
+                      <input type="submit" class='m-btn m-btn-theme btn-block button' value="Sign up" name="subscribe" id="mc-embedded-subscribe" >
                     </div>
                   </div>
                 </div>
@@ -465,6 +465,13 @@
             </div>
           </div>
         </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';fnames[6]='COMPANY';ftypes[6]='text';fnames[7]='QUESTIONS';ftypes[7]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <script type='text/javascript'>
+          (function($){
+
+          })
+
+        </script>
 
       </div> <!-- Container -->
     </section>
@@ -481,12 +488,12 @@
         <div class="row">
           <div class="col-md-12 col-lg-5 sm-m-15px-tb md-m-30px-b">
             <h4>About Us</h4>
-            <p class="footer-text">Proudly brought to you by the mad minds behind <a href='https://dashbird.io'>Dashbird.io</a> - your friendly neighbourhood serverless observability platform.</p>
+            <p class="footer-text">Brought to you by the minds behind <a href='https://dashbird.io'>Dashbird.io</a>, your friendly neighbourhood serverless observability platform.</p>
             <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a class="google" href="#"><i class="fab fa-google-plus-g"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <!-- <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li> -->
+              <!-- <li><a class="twitter" target='_blank' href="https://twitter.com/logpipe"><i class="fab fa-twitter"></i></a></li> -->
+              <!-- <li><a class="google" href="#"><i class="fab fa-google-plus-g"></i></a></li> -->
+              <!-- <li><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a></li> -->
             </ul>
           </div> <!-- col -->
 
@@ -499,7 +506,7 @@
           <div class="col-md-4 col-lg-3 sm-m-15px-tb">
             <h4>Get in touch</h4>
             <p>548 Market St., <b>San Francisco</b></p>
-            <p><span>E-Mail:</span> info@logbird.com </p>
+            <p><span>E-Mail:</span> logbird@dashbird.io</p>
             <p><span>Phone:</span> +1 (415) 800-3065</p>
           </div> <!-- col -->
 
@@ -508,7 +515,7 @@
         <div class="footer-copy">
           <div class="row">
             <div class="col-12">
-              <p>All © Copyright by . All Rights Reserved.</p>
+              <p>All © Copyright by Dashbird. All Rights Reserved.</p>
             </div><!-- col -->
           </div> <!-- row -->
         </div> <!-- footer-copy -->

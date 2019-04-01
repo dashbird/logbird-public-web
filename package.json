@@ -1,0 +1,45 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Dashbird.io public web",
+  "main": "index.js",
+  "scripts": {
+    "start": "hugo -D server --disableFastRender",
+    "deploy": "aws s3 sync --acl public-read --sse --delete ./  s3://aws-website-httpslogbirdio-hgwto && aws cloudfront create-invalidation --distribution-id E1L3HI2QBUVPAR --paths '/*'",
+    "build": "hugo",
+    "compile": "./compile.sh",
+    "checksum": "./create_checksum.sh",
+    "lint": "standard",
+    "dev": "npm run lint && npm start",
+    "prod": "rm -rf ./public && npm run build && npm run compile && npm run checksum && cd ./public && python -m SimpleHTTPServer",
+    "prod-no-compile": "rm -rf ./public && npm run build && cd ./public && python -m SimpleHTTPServer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashbird/site.git"
+  },
+  "keywords": [
+    "dashbird",
+    "public",
+    "web",
+    "blog"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dashbird/site/issues"
+  },
+  "homepage": "https://github.com/dashbird/site#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "clean-css-cli": "^4.1.11",
+    "html-minifier": "^3.5.16"
+  },
+  "devDependencies": {
+    "hugo-cli": "^0.7.0",
+    "hugo-lunr": "0.0.4",
+    "standard": "^11.0.1"
+  }
+}
