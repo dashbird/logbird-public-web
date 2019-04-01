@@ -220,5 +220,3 @@ Template Name   : Lucro
     });
 
 })(jQuery);
-
-
