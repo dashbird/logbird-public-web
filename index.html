@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Logbird - Event Catcher For Modern Cloud</title>
+  <title>Logbird - Gateway For Logs</title>
 
   <!---Font Icon-->
   <link href="static/plugin/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
   <!-- / -->
 
   <!-- Favicon -->
-  <link rel="icon" href="/static/img/favicon.ico" />
+  <link rel="icon" href="/static/img/logbird.svg" />
   <!-- / -->
 </head>
 
@@ -42,7 +42,7 @@
     <nav class="navbar header-nav fixed-top navbar-expand-lg">
       <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand">Logbird</a>
+        <a class="navbar-brand align-items-end"><img src='static/img/logbird.svg'>Logbird</a>
         <!-- / -->
 
         <!-- Mobile Toggle -->
@@ -79,8 +79,8 @@
         <div class="row full-screen align-items-center">
           <div class="col col-md-10 col-lg-7 col-xl-7 md-p-30px-b p-60px-t md-p-50px-t">
             <div class="home-text-center theme-after p-50px-r md-p-0px-r">
-              <h1>Event-catcher for the modern cloud.</h1>
-              <p class='text-justify'>Plug-and-play solution for tracking errors, misconfigurations<br> and custom metrics in modern cloud apps.</p>
+              <h1>Gateway for logs.</h1>
+              <p class='text-justify'>Catch any event or metric. Trigger activity.</p>
               <div class="app-btn-set">
                 <a href="#contact-form" class="m-btn m-btn-theme" data-text="Free Trial">Sign up for early access</a>
               </div>
@@ -100,15 +100,182 @@
     <section id="feature" class="section">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 mx-auto">
-            <p class='text-center' style='font-size: 14pt;'>Send your cloud logs here and we detect events you'll want to know of. Our filters recognise runtime errors, service failures like AWS Lambda timeouts, bad API Gateway requests and any custom event you need to track. You can observe events in our platform or pipe them forward to services like SNS, webhooks, e-mail, Slack.</p>
+          <div class="col-12 mx-auto text-center section-title">
+            <h1>Logs to the moon.</h1>
+          </div>
+        </div>
+
+        <div class="row mt-80">
+          <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center p-5">
+            <h4>Catch issues from cloud services.</h4>
+            <p class='mt-3 text-justify'>Track errors and events across all cloud services that produce logs. Set filters from curated & community-supported list of existing filters or create your own.</p>
+            <a href='/library' class='btn btn-outline-primary w-50'>Filter library</a>
+          </div> <!-- col -->
+          <div class="col-12 col-md-6 mx-auto">
+
+            <div class='d-flex'>
+              <div class='notification red d-flex flex-grow-1'>
+                <div class='logo'><img src='static/img/icons/lambda.png'></div>
+                <div class='text flex-grow-1'>
+                  <b>TIMEOUT</b> in <u>get-user-info</u> Lambda.
+                  <span class='l d-block'>Task timed out after 60.1 seconds.</span>
+                </div>
+              </div>
+              <div>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/sns.png'>
+              </div>
+            </div>
+
+            <div class='notification red d-flex '>
+              <div class='logo'><img src='static/img/icons/ecs.png'></div>
+              <div class='text flex-grow-1'>
+                <b>FileNotFoundException</b> in <u>prod-instance</u> ECS.
+                <span class='l d-block'>FileNotFoundException: Error occurred in line 85...</span>
+              </div>
+              <img src='static/img/bar-chart.png'>
+            </div>
+
+            <div class='notification blue d-flex justify-content-between'>
+              <div class='logo'><img src='static/img/icons/aurora.png'></div>
+              <div class='text flex-grow-1'>
+                <span class='h'><b>Slow query</b> in <u>users-prod-table</u> Aurora.</span>
+                <span class='l d-block'>Request took more tha 1.5 seconds to finish.</span>
+              </div>
+              <img src='static/img/bar-chart.png'>
+            </div>
+
+            <div class='notification red d-flex justify-content-between'>
+              <div class='logo'><img src='static/img/icons/appsync.png'></div>
+              <div class='text flex-grow-1'>
+                <b>Incorrect return type</b> in <u>Users</u> AppSync API.
+                <span class='l d-block'>Can't resolve value (/users): type mismatch err..</span>
+              </div>
+              <img src='static/img/bar-chart.png'>
+            </div>
+
           </div> <!-- col -->
         </div> <!-- row -->
 
+        <div class="row mt-150">
+          <div class="col-12 col-md-6">
+            <div class='d-flex'>
+              <div class='notification yellow d-flex flex-grow-1'>
+                <div class='logo'><img src='static/img/icons/custom.png'></div>
+                <div class='text flex-grow-1'>
+                  <span class='h'><b>Sales lead:</b> David from <u>Chimp Inc</u>.</span>
+                  <span class='l d-block'>sql { name: 'David Bowie', phone: '+1 443...</span>
+                </div>
+              </div>
+                <div>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/email.png'>
+                </div>
             </div>
-          </div> <!-- col -->
+
+            <div class='d-flex'>
+              <div class='notification blue d-flex flex-grow-1'>
+                <div class='logo'><img src='static/img/icons/shekel.png'></div>
+                <div class='text flex-grow-1'>
+                  <b>Payment received</b> from <u>Banana Inc</u>.
+                  <span class='l d-block'>payment { amount: '5000', currency: 'USD'...</span>
+                </div>
+              </div>
+              <div>
+              <img class='arrow' src='static/img/icons/arrow.svg'>
+              <img class='target' src='static/img/icons/slack.png'>
+              </div>
+            </div>
+
+            <div class='notification green d-flex '>
+              <div class='logo'><img src='static/img/icons/custom.png'></div>
+              <div class='text flex-grow-1'>
+                <b>Signup</b> by <u>bobby@droptables.com</u>.
+                <span class='l d-block'>signup { firstname: 'bobby', lastname: 'droptables'...</span>
+              </div>
+              <img src='static/img/bar-chart.png'>
+            </div>
+
+            <div class='d-flex'>
+              <div class='notification red d-flex flex-grow-1'>
+                <div class='logo'><img src='static/img/icons/cancel.png'></div>
+                <div class='text flex-grow-1'>
+                  <b>Subscription canceled </b> by <u>Pants Inc</u>.
+                  <span class='l d-block'>subscription canceled { guid: '19cgo..</span>
+                </div>
+              </div>
+              <div>
+              <img class='arrow' src='static/img/icons/arrow.svg'>
+              <img class='target' src='static/img/icons/webhook.png'>
+              </div>
+          </div>
+
+         </div>
+
+          <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center p-5">
+            <h4>Track business events.</h4>
+            <p class='mt-3 text-justify'>Log out events that are meaningful to your business. Sales and marketing teams will decide for themselves where to take it.</p>
+          </div>
+
         </div> <!-- row -->
-        </div> <!-- row -->
+
+        <div class="row mt-150">
+          <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center p-5">
+            <h4>Start background jobs.</h4>
+            <p class='mt-3 text-justify'>Trigger asynchronous tasks on the background to keep your code clean and speed up code executions.</p>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class='d-flex'>
+              <div class='notification red d-flex flex-grow-1'>
+                <div class='logo'><img src='static/img/icons/ecs.png'></div>
+                <div class='text flex-grow-1'>
+                  <span class='h'><b>Account deleted</b>, triggering cleanup.</span>
+                  <span class='l d-block'>delete { company: 'Cartoon Networks', </span>
+                </div>
+              </div>
+                <div>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/lambda.png'>
+                </div>
+            </div>
+
+            <div class='d-flex'>
+              <div class='notification blue d-flex flex-grow-1'>
+                <div class='logo'><img src='static/img/icons/shekel.png'></div>
+                <div class='text flex-grow-1'>
+                  <b>Successful transaction</b>, send email.
+                  <span class='l d-block'>payment { amount: '5000', currency: 'USD'...</span>
+                </div>
+              </div>
+              <div>
+              <img class='arrow' src='static/img/icons/arrow.svg'>
+              <img class='target' src='static/img/icons/ses.png'>
+              </div>
+            </div>
+
+            <div class='d-flex'>
+              <div class='notification red d-flex flex-grow-1'>
+                <div class='logo'><img src='static/img/icons/cancel.png'></div>
+                <div class='text flex-grow-1'>
+                  <b>Image uploaded</b>, triggering resize.
+                  <span class='l d-block'>image { src: '/images..</span>
+                </div>
+              </div>
+              <div>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/sns.png'>
+              </div>
+            </div>
+         </div>
+      </div> 
+
+      <div class="row mt-80">
+        <div class="col-12 mx-auto text-center section-title">
+          <h3>...or anything else you can imagine.</h3>
+        </div>
+      </div>
+
       </div> <!-- container -->
     </section>
     <!-- / -->
@@ -118,127 +285,60 @@
     <section id="feature" class="section gray-bg">
       <div class="container">
         <div class="row m-45px-b md-m-25px-b">
-          <div class="col-md-12">
+          <div class="col-12 col-md-6">
             <div class="section-title">
+              <h2>From...</h2>
+                <div class='d-flex align-middle ml-4'>
+                  <img class='source' src='static/img/icons/cloudwatch.png'>
+                  <div class='my-auto'>
+                    <b>AWS CloudWatch</b>
+                  </div>
+                </div>
 
-              <h2>Gets going in seconds - knows all cloud services.</h2>
-              <!-- <h2>Knows all cloud services - installs in seconds.</h2> -->
-              <p>You select which services you want to track and we'll take care of the rest</p>
+                <div class='d-flex align-middle mt-5 ml-4'>
+                  <img class='source' src='static/img/icons/fluentd.png'>
+                  <div class='my-auto'>
+                  </div>
+                </div>
             </div>
           </div> <!-- col -->
-        </div> <!-- row -->
 
-        <div class="row m-45px-b md-m-25px-b">
-          <div class="col-md-12">
-          <div class="row">
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/ec2.png'>
-              <p class='text-center pt-1 text-bold'>EC2</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/lambda.png'>
-              <p class='text-center pt-1 text-bold'>Lambda</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/fargate.png'>
-              <p class='text-center pt-1 text-bold'>Fargate</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/elastic-beanstalk.png'>
-              <p class='text-center pt-1 text-bold'>Elastic Beanstalk</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/ecs.png'>
-              <p class='text-center pt-1 text-bold'>ECS</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/lightsail.png'>
-              <p class='text-center pt-1 text-bold'>Lightsail</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/aurora.png'>
-              <p class='text-center pt-1 text-bold'>Aurora</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/dynamodb.png'>
-              <p class='text-center pt-1 text-bold'>DynamoDB</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/rds.png'>
-              <p class='text-center pt-1 text-bold'>RDS</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/redshift.png'>
-              <p class='text-center pt-1 text-bold'>Redshift</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/appsync.png'>
-              <p class='text-center pt-1 text-bold'>AppSync</p>
-            </div>
-            <div class='col-auto' style='width:110px;'>
-              <img src='static/img/icons/api-gateway.png'>
-              <p class='text-center pt-1 text-bold'>API Gateway</p>
-            </div>
+          <div class="col-12 col-md-6">
+            <div class="section-title">
+              <h2>to...</h2>
+
+                <div class='d-flex align-middle ml-4'>
+                  <img class='source' src='static/img/icons/sns.png'>
+                  <div class='my-auto'>
+                    <b>AWS Simple Notification Service</b>
+                  </div>
+                </div>
+
+                <div class='d-flex align-middle ml-4 mt-4'>
+                  <img class='source' src='static/img/icons/email.png'>
+                  <div class='my-auto'>
+                    <b>Email</b> - coming soon.
+                  </div>
+                </div>
+
+                <div class='d-flex align-middle ml-4 mt-4'>
+                  <img class='source' src='static/img/icons/slack.png'>
+                  <div class='my-auto'>
+                    <b>Slack</b> - coming soon.
+                  </div>
+                </div>
+
+                <div class='d-flex align-middle ml-4 mt-4'>
+                  <img class='source' src='static/img/icons/webhook.png'>
+                  <div class='my-auto'>
+                    <b>Webhooks</b> - coming soon.
+                  </div>
+                </div>
 
             </div>
           </div> <!-- col -->
-        </div> <!-- row -->
         </div> <!-- row -->
       </div> <!-- container -->
-    </section>
-    <!-- / -->
-
-    <!-- Featre -->
-    <section class="section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-5 sm-m-30px-t">
-              <img class="up-down" src="static/img/talks.svg" title="" alt="">
-            </div>
-
-            <div class="col-md-7 p-100px-l md-p-15px-l md-m-30px-t">
-              <div class="section-title m-45px-b">
-                <h3>Talks with your existing tools</h3>
-                <p>Logbird integrates with your current tools. You can use our out-of-the-box integrations or integrate with anything with webhooks or SNS.</p>
-              </div>
-              <div class="feature-box-03 m-30px-b">
-                <div class="icon">
-                  <i class="ti-mobile text-blue"></i>
-                </div>
-                <div class="desc">
-                  <h3>Event alerting</h3>
-                  <p>Get Slack and e-mail notifications for exceptions and events.</p>
-                </div>
-              </div>
-
-              <div class="feature-box-03 m-30px-b">
-                <div class="icon">
-                  <i class="ti-settings text-indigo"></i>
-                </div>
-                <h3>Automatic reactions</h3>
-                <p>Send SNS and webhook triggers to automatically react to events.</p>
-              </div>
-
-              <div class="feature-box-03 m-30px-b">
-                <div class="icon">
-                  <i class="ti-paint-roller text-pink"></i>
-                </div>
-                <h3>Incident management</h3>
-                <p>Integrate with PagerDuty or OpsGenie for full-blown incident management.</p>
-              </div>
-
-              <!-- <div class="feature-box-03 m-40px-b"> -->
-              <!--   <div class="icon"> -->
-              <!--     <i class="ti-headphone-alt text-orange"></i> -->
-              <!--   </div> -->
-              <!--   <h3>Opsgenie</h3> -->
-              <!--   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p> -->
-              <!-- </div> -->
-
-            </div> <!-- col -->
-
-        </div><!-- row -->
-      </div>
     </section>
     <!-- / -->
 
@@ -379,7 +479,7 @@
     <!-- / -->
 
     <!-- Contact uss -->
-    <section  id='contact-form' class="section gray-bg">
+    <section  id='contact-form' class="section">
       <div class="container">
         <div class="row m-45px-b md-m-25px-b">
           <div class="col-md-12">

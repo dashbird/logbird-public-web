@@ -37,7 +37,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   line-height: 1.8;
-  color: #888;
+  color: #000;
   font-smoothing: antialiased;
   font-weight: 400;
   overflow-x: hidden;
@@ -618,11 +618,16 @@ img {
 }
 
 .header-nav .navbar-brand {
-  color: #fff;
+  color: #fff !important;
   font-weight: 700;
   position: relative;
   font-size: 20px;
   letter-spacing: 0.5px;
+  padding: 0;
+}
+.header-nav .navbar-brand img { 
+  max-height: 40px;
+  margin-right: 0px;
 }
 
 .header-nav .navbar-nav > li {
@@ -3449,4 +3454,41 @@ img {
   .sm-p-90px-r {padding-right:90px}
   .sm-p-95px-r {padding-right:95px}
   .sm-p-100px-r {padding-right:100px}
+}
+
+
+.notification {
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+.red {
+  border: 1px solid #f73e2a;
+  background: #fceeea;
+}
+.yellow {
+  border: 1px solid #ffcd19;
+  background: #feffd3;
+}
+.blue {
+  border: 1px solid #18d4ff;
+  background: #edf9ff;
+}
+.green {
+  border: 1px solid #aaffb4;
+  background: #edffef;
+}
+.notification img, .target {
+  height: 55px;
+  max-width: 55px;
+}
+.arrow { height: 55px; margin-left: 15px; }
+.notification .logo { margin-right: 10px; }
+.notification .l { color: #888; }
+.mt-80 { margin-top: 80px !important; }
+.mt-150 { margin-top: 150px !important; }
+
+.source {
+  margin-right: 10px;
+  height: 65px;
 }
