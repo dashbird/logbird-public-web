@@ -77,18 +77,113 @@
       </div>
       <div class="container">
         <div class="row full-screen align-items-center">
-          <div class="col col-md-10 col-lg-7 col-xl-7 md-p-30px-b p-60px-t md-p-50px-t">
+          <div class="col col-md-10 col-lg-6 col-xl-6 md-p-30px-b p-60px-t md-p-50px-t text-center text-md-left">
             <div class="home-text-center theme-after p-50px-r md-p-0px-r">
-              <h1>Gateway for logs.</h1>
-              <p class='text-justify'>Catch any event or metric. Trigger activity.</p>
+              <h1 class='text-center text-md-left mt-5'>Gateway for logs.</h1>
+              <p class='text-center text-md-left'>Catch any event or metric. Trigger activity.</p>
               <div class="app-btn-set">
                 <a href="#contact-form" class="m-btn m-btn-theme" data-text="Free Trial">Sign up for early access</a>
               </div>
-
             </div> <!-- home-text-center -->
           </div> <!-- col -->
-          <div class="col-md-12 col-lg-5 col-xl-5 home-right">
-              <img class="img-fluid" src="static/img/test.png" title="" alt="">
+          <div class="col-md-12 col-lg-6 col-xl-6 home-right">
+            <div class='d-flex mb-4'>
+              <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/lambda.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>TIMEOUT</b> in <u>get-user-info</u> Lambda.
+                  <span class='log'>Task timed out after 60.1 seconds.</span>
+                </div>
+                <img class='d-md-none target' src='static/img/icons/sns.png'>
+              </div>
+              <div class='d-none d-md-flex'>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/sns.png'>
+              </div>
+            </div>
+
+            <div class='d-flex mb-4'>
+              <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/appsync.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Incorrect return type</b> in <u>Users</u> AppSync API.
+                  <span class='l d-block'>Can't resolve value (/users): type mismatch err..</span>
+                </div>
+                <img src='static/img/bar-chart.png'>
+              </div>
+            </div>
+
+            <div class='d-flex mb-4'>
+              <div class='notification blue d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/aurora.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <span class='h'><b>Slow query</b> in <u>users-prod-table</u> Aurora.</span>
+                  <span class='l d-block'>Request took more tha 1.5 seconds to finish.</span>
+                </div>
+                <img src='static/img/bar-chart.png'>
+              </div>
+            </div>
+
+            <div class='d-flex mb-4'>
+              <div class='notification green d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/shekel.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Payment received</b> from <u>Banana Inc</u>.
+                  <span class='log d-block'>payment { amount: '5000', currency: 'USD'...</span>
+                </div>
+                <img class='d-md-none target' src='static/img/icons/slack.png'>
+              </div>
+              <div class='d-none d-md-flex'>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/slack.png'>
+              </div>
+            </div>
+
+            <div class='d-flex mb-4'>
+              <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/ecs.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Account deleted</b>, triggering cleanup.
+                  <span class='log'>delete { company: 'Cartoon Networks', </span>
+                </div>
+                <img class='d-md-none target' src='static/img/icons/lambda.png'>
+              </div>
+              <div class='d-none d-md-flex'>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/lambda.png'>
+              </div>
+            </div>
+
+            <div class='d-flex mb-4'>
+              <div class='notification blue d-flex flex-grow-1 text-truncate'>
+                <div class='d-none d-md-block'><img src='static/img/icons/shekel.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Successful transaction</b>, send email.
+                  <span class='log'>payment { amount: '5000', currency: 'USD'</span>
+                </div>
+                <img class='d-md-none target' src='static/img/icons/ses.png'>
+              </div>
+              <div class='d-none d-md-flex'>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/ses.png'>
+              </div>
+            </div>
+
+            <div class='d-flex'>
+              <div class='notification red d-flex flex-grow-1 text-truncate'>
+                <div class='d-none d-md-block'><img src='static/img/icons/cancel.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Image uploaded</b>, triggering resize.
+                  <span class='log'>image { src: '/images..</span>
+                </div>
+                <img class='target d-md-none' src='static/img/icons/sns.png'>
+              </div>
+              <div class='d-none d-md-flex'>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/sns.png'>
+              </div>
+            </div>
+
           </div> <!-- col -->
         </div> <!-- row -->
       </div><!-- container -->
@@ -105,172 +200,191 @@
           </div>
         </div>
 
-        <div class="row mt-80">
+        <div class="row mt-5">
           <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center p-5">
             <h4>Catch issues from cloud services.</h4>
             <p class='mt-3 text-justify'>Track errors and events across all cloud services that produce logs. Set filters from curated & community-supported list of existing filters or create your own.</p>
             <a href='/library' class='btn btn-outline-primary w-50'>Filter library</a>
           </div> <!-- col -->
+
           <div class="col-12 col-md-6 mx-auto">
 
-            <div class='d-flex'>
-              <div class='notification red d-flex flex-grow-1'>
-                <div class='logo'><img src='static/img/icons/lambda.png'></div>
-                <div class='text flex-grow-1'>
+            <div class='d-flex mb-2'>
+              <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/lambda.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
                   <b>TIMEOUT</b> in <u>get-user-info</u> Lambda.
-                  <span class='l d-block'>Task timed out after 60.1 seconds.</span>
+                  <span class='log'>Task timed out after 60.1 seconds.</span>
                 </div>
+                <img class='d-md-none target' src='static/img/icons/sns.png'>
               </div>
-              <div>
+              <div class='d-none d-md-flex'>
                 <img class='arrow' src='static/img/icons/arrow.svg'>
                 <img class='target' src='static/img/icons/sns.png'>
               </div>
             </div>
 
-            <div class='notification red d-flex '>
-              <div class='logo'><img src='static/img/icons/ecs.png'></div>
-              <div class='text flex-grow-1'>
-                <b>FileNotFoundException</b> in <u>prod-instance</u> ECS.
-                <span class='l d-block'>FileNotFoundException: Error occurred in line 85...</span>
+            <div class='d-flex mb-2'>
+              <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/ecs.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>FileNotFoundException</b> in <u>prod-instance</u> ECS.
+                  <span class='l d-block'>FileNotFoundException: Error occurred in line 85...</span>
+                </div>
+                <img src='static/img/bar-chart.png'>
               </div>
-              <img src='static/img/bar-chart.png'>
             </div>
 
-            <div class='notification blue d-flex justify-content-between'>
-              <div class='logo'><img src='static/img/icons/aurora.png'></div>
-              <div class='text flex-grow-1'>
-                <span class='h'><b>Slow query</b> in <u>users-prod-table</u> Aurora.</span>
-                <span class='l d-block'>Request took more tha 1.5 seconds to finish.</span>
+            <div class='d-flex mb-2'>
+              <div class='notification blue d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/aurora.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <span class='h'><b>Slow query</b> in <u>users-prod-table</u> Aurora.</span>
+                  <span class='l d-block'>Request took more tha 1.5 seconds to finish.</span>
+                </div>
+                <img src='static/img/bar-chart.png'>
               </div>
-              <img src='static/img/bar-chart.png'>
             </div>
 
-            <div class='notification red d-flex justify-content-between'>
-              <div class='logo'><img src='static/img/icons/appsync.png'></div>
-              <div class='text flex-grow-1'>
-                <b>Incorrect return type</b> in <u>Users</u> AppSync API.
-                <span class='l d-block'>Can't resolve value (/users): type mismatch err..</span>
+            <div class='d-flex mb-2'>
+              <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/appsync.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Incorrect return type</b> in <u>Users</u> AppSync API.
+                  <span class='l d-block'>Can't resolve value (/users): type mismatch err..</span>
+                </div>
+                <img src='static/img/bar-chart.png'>
               </div>
-              <img src='static/img/bar-chart.png'>
             </div>
-
           </div> <!-- col -->
         </div> <!-- row -->
 
-        <div class="row mt-150">
-          <div class="col-12 col-md-6">
-            <div class='d-flex'>
-              <div class='notification yellow d-flex flex-grow-1'>
-                <div class='logo'><img src='static/img/icons/custom.png'></div>
-                <div class='text flex-grow-1'>
-                  <span class='h'><b>Sales lead:</b> David from <u>Chimp Inc</u>.</span>
-                  <span class='l d-block'>sql { name: 'David Bowie', phone: '+1 443...</span>
-                </div>
-              </div>
-                <div>
-                <img class='arrow' src='static/img/icons/arrow.svg'>
-                <img class='target' src='static/img/icons/email.png'>
-                </div>
-            </div>
-
-            <div class='d-flex'>
-              <div class='notification blue d-flex flex-grow-1'>
-                <div class='logo'><img src='static/img/icons/shekel.png'></div>
-                <div class='text flex-grow-1'>
-                  <b>Payment received</b> from <u>Banana Inc</u>.
-                  <span class='l d-block'>payment { amount: '5000', currency: 'USD'...</span>
-                </div>
-              </div>
-              <div>
-              <img class='arrow' src='static/img/icons/arrow.svg'>
-              <img class='target' src='static/img/icons/slack.png'>
-              </div>
-            </div>
-
-            <div class='notification green d-flex '>
-              <div class='logo'><img src='static/img/icons/custom.png'></div>
-              <div class='text flex-grow-1'>
-                <b>Signup</b> by <u>bobby@droptables.com</u>.
-                <span class='l d-block'>signup { firstname: 'bobby', lastname: 'droptables'...</span>
-              </div>
-              <img src='static/img/bar-chart.png'>
-            </div>
-
-            <div class='d-flex'>
-              <div class='notification red d-flex flex-grow-1'>
-                <div class='logo'><img src='static/img/icons/cancel.png'></div>
-                <div class='text flex-grow-1'>
-                  <b>Subscription canceled </b> by <u>Pants Inc</u>.
-                  <span class='l d-block'>subscription canceled { guid: '19cgo..</span>
-                </div>
-              </div>
-              <div>
-              <img class='arrow' src='static/img/icons/arrow.svg'>
-              <img class='target' src='static/img/icons/webhook.png'>
-              </div>
-          </div>
-
-         </div>
-
-          <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center p-5">
+        <div class="row m-100px-t">
+          <div class="col-12 col-md-6 d-block d-md-none text-center justify-content-start justify-content-md-center pt-3">
             <h4>Track business events.</h4>
             <p class='mt-3 text-justify'>Log out events that are meaningful to your business. Sales and marketing teams will decide for themselves where to take it.</p>
           </div>
 
+          <div class="col-12 col-md-6">
+            <div class='d-flex mb-2'>
+              <div class='notification green d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/custom.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Sales lead:</b> David from <u>Chimp Inc</u>.
+                  <span class='log'>sql { name: 'David Bowie', phone: '+1 443...</span>
+                </div>
+                <img class='d-md-none target' src='static/img/icons/email.png'>
+              </div>
+              <div class='d-none d-md-flex'>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/email.png'>
+              </div>
+            </div>
+
+            <div class='d-flex mb-2'>
+              <div class='notification green d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/shekel.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Payment received</b> from <u>Banana Inc</u>.
+                  <span class='log d-block'>payment { amount: '5000', currency: 'USD'...</span>
+                </div>
+                <img class='d-md-none target' src='static/img/icons/slack.png'>
+              </div>
+              <div class='d-none d-md-flex'>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/slack.png'>
+              </div>
+            </div>
+
+            <div class='d-flex mb-2'>
+              <div class='notification yellow d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/custom.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Signup</b> by <u>bobby@droptables.com</u>.
+                  <span class='log'>signup { firstname: 'bobby', lastname: 'droptables'...</span>
+                </div>
+                <img class='target' src='static/img/bar-chart.png'>
+              </div>
+            </div>
+            
+            <div class='d-flex mb-2'>
+              <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/cancel.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Subscription canceled </b> by <u>Pants Inc</u>.
+                  <span class='log'>subscription canceled { guid: '19cgo..</span>
+                </div>
+                <img class='d-md-none target' src='static/img/icons/webhook.png'>
+              </div>
+              <div class='d-none d-md-flex'>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/webhook.png'>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 d-none d-md-block text-center justify-content-start justify-content-md-center pt-3">
+            <h4>Track business events.</h4>
+            <p class='mt-3 text-justify'>Log out events that are meaningful to your business. Sales and marketing teams will decide for themselves where to take it.</p>
+          </div>
         </div> <!-- row -->
 
-        <div class="row mt-150">
-          <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center p-5">
+        <div class="row m-100px-t">
+          <div class="col-12 col-md-6 text-center justify-content-start justify-content-md-center pt-3">
             <h4>Start background jobs.</h4>
             <p class='mt-3 text-justify'>Trigger asynchronous tasks on the background to keep your code clean and speed up code executions.</p>
           </div>
 
           <div class="col-12 col-md-6">
-            <div class='d-flex'>
-              <div class='notification red d-flex flex-grow-1'>
-                <div class='logo'><img src='static/img/icons/ecs.png'></div>
-                <div class='text flex-grow-1'>
-                  <span class='h'><b>Account deleted</b>, triggering cleanup.</span>
-                  <span class='l d-block'>delete { company: 'Cartoon Networks', </span>
+
+            <div class='d-flex mb-2'>
+              <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+                <div class='d-none d-md-block'><img src='static/img/icons/ecs.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
+                  <b>Account deleted</b>, triggering cleanup.
+                  <span class='log'>delete { company: 'Cartoon Networks', </span>
                 </div>
+                <img class='d-md-none target' src='static/img/icons/lambda.png'>
               </div>
-                <div>
+              <div class='d-none d-md-flex'>
                 <img class='arrow' src='static/img/icons/arrow.svg'>
                 <img class='target' src='static/img/icons/lambda.png'>
-                </div>
+              </div>
             </div>
 
-            <div class='d-flex'>
-              <div class='notification blue d-flex flex-grow-1'>
-                <div class='logo'><img src='static/img/icons/shekel.png'></div>
-                <div class='text flex-grow-1'>
+            <div class='d-flex mb-2'>
+              <div class='notification blue d-flex flex-grow-1 text-truncate'>
+                <div class='d-none d-md-block'><img src='static/img/icons/shekel.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
                   <b>Successful transaction</b>, send email.
-                  <span class='l d-block'>payment { amount: '5000', currency: 'USD'...</span>
+                  <span class='log'>payment { amount: '5000', currency: 'USD'</span>
                 </div>
+                <img class='d-md-none target' src='static/img/icons/ses.png'>
               </div>
-              <div>
-              <img class='arrow' src='static/img/icons/arrow.svg'>
-              <img class='target' src='static/img/icons/ses.png'>
+              <div class='d-none d-md-flex'>
+                <img class='arrow' src='static/img/icons/arrow.svg'>
+                <img class='target' src='static/img/icons/ses.png'>
               </div>
             </div>
 
             <div class='d-flex'>
-              <div class='notification red d-flex flex-grow-1'>
-                <div class='logo'><img src='static/img/icons/cancel.png'></div>
-                <div class='text flex-grow-1'>
+              <div class='notification red d-flex flex-grow-1 text-truncate'>
+                <div class='d-none d-md-block'><img src='static/img/icons/cancel.png'></div>
+                <div class='ml-1 text-truncate flex-grow-1'>
                   <b>Image uploaded</b>, triggering resize.
-                  <span class='l d-block'>image { src: '/images..</span>
+                  <span class='log'>image { src: '/images..</span>
                 </div>
+                <img class='target d-md-none' src='static/img/icons/sns.png'>
               </div>
-              <div>
+              <div class='d-none d-md-flex'>
                 <img class='arrow' src='static/img/icons/arrow.svg'>
                 <img class='target' src='static/img/icons/sns.png'>
               </div>
             </div>
-         </div>
-      </div> 
+          </div>
+        </div> <!-- row -->
 
-      <div class="row mt-80">
+      <div class="row mt-80 d-none">
         <div class="col-12 mx-auto text-center section-title">
           <h3>...or anything else you can imagine.</h3>
         </div>
@@ -303,7 +417,7 @@
             </div>
           </div> <!-- col -->
 
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 mt-5 mt-m-0">
             <div class="section-title">
               <h2>to...</h2>
 
@@ -484,8 +598,8 @@
         <div class="row m-45px-b md-m-25px-b">
           <div class="col-md-12">
             <div class="section-title">
-              <h2>Register for early access</h2>
-              <p>We are launching soon and looking for feature companies to develop the final stages of the product. Reach out if you want to be one of them.</p>
+              <h2 class='text-center text-md-left'>Register for early access</h2>
+              <p class='text-justify text-md-left'>We are launching soon and looking for feature companies to develop the final stages of the product. Reach out if you want to be one of them.</p>
             </div>
           </div> <!-- col -->
         </div> <!-- row -->
