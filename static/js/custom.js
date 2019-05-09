@@ -7,6 +7,7 @@ Template Name   : Lucro
 
 (function($){
     "use strict"
+
     var LUC = {};
 
     /*--------------------

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Logbird - Gateway For Logs</title>
+    {{ partial "meta.html" . }}
+    {{ partial "stylesheets.html" }}
+  </head>
+  <body>
+    <div class='background-gradient-bottom'>
+      {{ partial "header.html" . }}
+      {{ block "main" . }}{{ end }}
+      {{ partial "footer.html" . }}
+    </div>
+  </body>
+</html>
