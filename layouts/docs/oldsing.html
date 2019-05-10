@@ -1,0 +1,166 @@
+{{ $currentPage := .   }}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/css/vendor.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <title>Layout - 2</title>
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+
+
+    <section class="py-0">
+      <div class="container-fluid">
+        <div class="row justify-content-between">
+
+          <!-- navigation -->
+          <aside class="col-lg-3 col-xxl-2 p-3 doc-sidebar">
+            <div class="sticky">
+              <nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+                <div>
+                  <a href="/" class="navbar-brand"><img src="/img/logbird.svg" alt="Logo">Logbird</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  {{ $currentSubject := index .Params.kbSeries 0 }}
+                  <ul id="page-nav" class="nav flex-column nav-vertical-2">
+                    {{ range $subject, $taxonomy := .Site.Taxonomies.kbSeries }}
+                    <li class="nav-item {{ if eq $subject $currentSubject }}active{{end}}">
+                      <a class="nav-link" data-toggle="collapse" href="#{{ substr $subject 1 }}" role="button" aria-expanded="{{ if eq $subject $currentSubject }}true{{ else }}false{{end}}" aria-controls="{{ substr $subject 1 }}">{{ substr $subject 1 }}</a>
+                      <div class="collapse {{ if eq $subject $currentSubject }}show{{end}}" id="{{ substr $subject 1 }}" data-parent="#page-nav">
+                        <ul class="nav flex-column">
+                          {{ range $taxonomy }}
+                          <li class="nav-item">
+                            <a class="nav-link {{ if eq .Page.URL $currentPage.URL }}active{{end}}" href="{{ .Page.Permalink }}">{{ .Params.LinkTitle }}</a>
+                          </li>
+                          {{ end }}
+                        </ul>
+                      </div>
+                    </li>
+                    {{ end }}
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </aside>
+          <!-- / navigation -->
+
+
+          <!-- content -->
+          <article class="col-lg-9 col-xxl-10 doc-content">
+
+            <div class="row">
+              <div class="col">
+                <div class="doc-content-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <nav aria-label="breadcrumb" class="align-items-center">
+                        <a href="../../index.html" class="breadcrumb-back" title="Back"></a>
+                        <ol class="breadcrumb d-none d-lg-inline-flex"> 
+                          <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Layout 2</li>
+                        </ol>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-between doc-content-body">
+              <article class="col-md-9 col-xxl-8">
+
+                <h1 class="h2 font-weight-light">Your <b>documentation</b> template can look like this. Check it out.</h1>
+                <!-- typogrpahy -->
+                <section id="section-1">
+                  <h2 class="section-title-2">Typography <a data-scroll href="#section-1" class="anchor" data-toggle="tooltip" data-placement="top" title="Copy URL"><i class="icon-hash"></i></a></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!</p>
+                  <div class="row gutter-3">
+                    <div class="col-6 col-md-4 col-xxl-3">
+                      <div class="type boxed">
+                        <div>
+                          <span class="badge badge-primary">New</span>
+                          <h5 class="type-title">Open Sans</h5>
+                          <div class="type-example">
+                            <span>Ab</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xxl-3">
+                      <div class="type bordered">
+                        <div>
+                          <h5 class="type-title">Open Sans Bold</h5>
+                          <div class="type-example">
+                            <span class="font-weight-bold">Ab</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- / typography -->
+
+
+              </article>
+            </div>
+
+          </article>
+          <!-- / content -->
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="bg-dark">
+      <div class="container">
+        <div class="row gutter-3">
+          <div class="col-12 col-md-2">
+            <a href=""><img src="/assets/images/logo-white.svg" alt="Logo"></a>
+          </div>
+          <div class="col-12 col-md-6 text-white">
+            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="row">
+              <div class="col">
+                <ul class="list-group list-group-minimal">
+                  <li class="list-group-item"><a href="" class="link">Product Help</a></li>
+                  <li class="list-group-item"><a href="" class="link">Training Videos</a></li>
+                  <li class="list-group-item"><a href="" class="link">Integrations</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul class="list-group list-group-minimal">
+                  <li class="list-group-item"><a href="" class="link">REST API</a></li>
+                  <li class="list-group-item"><a href="" class="link">Corporate</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-2 ml-auto text-md-right">
+            <div class="dropdown">
+              <button class="btn btn-inverted btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                English
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">French</a>
+                <a class="dropdown-item" href="#">German</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- / footer -->
+
+
+    <script src="/assets/js/vendor.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>

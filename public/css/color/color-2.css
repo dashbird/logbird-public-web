@@ -1,0 +1,22 @@
+.theme-bg {
+  background: #13836b;
+}
+.form-group .input-focus-effect,
+.tab-style-2 .nav-item .nav-link.active,
+.m-btn-theme,
+.theme-g-bg {
+    background-image: -webkit-linear-gradient(135deg, #10babe 0%, #13836b 100%);
+    background-image: linear-gradient(135deg, #10babe 0%, #13836b 100%);
+}
+.m-btn-theme:hover {
+  background-image: -webkit-linear-gradient(left, #13836b 0%, #10babe 100%);
+    background-image: linear-gradient(to right, #13836b 0%, #10babe 100%);
+}
+
+.tab-style-2 .nav-item .nav-link {
+  border-color: #13836b;
+}
+
+.theme-color {
+  color: #13836b;
+}

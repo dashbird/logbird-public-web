@@ -1,0 +1,23 @@
+{{ $currentPage := .   }}
+<div class="row">
+  <div class="col">
+    <div class="doc-content-header">
+      <div class="row align-items-center">
+        <div class="col">
+          {{ $currentSubject := index .Params.categories 0 }}
+          <nav aria-label="breadcrumb" class="align-items-center">
+            <ol class="breadcrumb d-none d-lg-inline-flex"> 
+              <li class="breadcrumb-item">{{ substr $currentSubject  1 }}</li>
+              <li class="breadcrumb-item active" aria-current="page">{{ .Page.Title }}</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col text-right">
+          <a href="/" class="btn btn-sm btn-primary btn-rounded">Back to Logbird.io</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 

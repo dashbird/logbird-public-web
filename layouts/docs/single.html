@@ -1,0 +1,38 @@
+{{ $currentPage := .   }}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/css/vendor.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <title>{{ .Title }} - Logbird Documentation</title>
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+    <section class="py-0">
+      <div class="container-fluid">
+        <div class="row justify-content-between">
+
+          {{ partial "docs-navigation.html" . }}
+
+          <!-- content -->
+          <article class="col-lg-9 col-xxl-10 doc-content">
+            {{ partial "docs-breadcrumb.html" . }}
+
+            <div class="row justify-content-between doc-content-body">
+              <article class="col-md-9 col-xxl-8">
+                {{ .Content }}
+              </article>
+            </div>
+
+          </article>
+          <!-- / content -->
+        </div>
+      </div>
+    </section>
+
+    {{ partial "docs-footer.html" . }}
+
+  </body>
+</html>

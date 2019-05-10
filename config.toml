@@ -1,3 +1,5 @@
-baseURL = "http://example.org/"
+baseURL = "https://logbird.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Logbird - Gateway for logs."
+[taxonomies]
+  categories = "categories"

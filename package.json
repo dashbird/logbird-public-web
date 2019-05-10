@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "hugo -D server --disableFastRender",
-    "deploy": "aws s3 sync --acl public-read --sse --delete ./  s3://logbird.io",
+    "deploy": "hugo && aws s3 sync --acl public-read --sse --delete public/  s3://logbird.io && aws cloudfront create-invalidation --distribution-id EK7JNW29W4U30 --paths '/*'",
     "build": "hugo",
     "compile": "./compile.sh",
     "checksum": "./create_checksum.sh",
