@@ -1,0 +1,60 @@
+---
+title: "Library of rules"
+date: 2019-05-10T13:21:42+03:00
+linktitle: "Library of rules"
+description: 'Library of rules'
+categories: ["CRules"]
+---
+<script type='text/javascript'>
+  (function($){
+    function renderRow(rule) {
+      return `<tr>
+          <th>${rule.service}</th>
+          <th>${rule.name}</th>
+          <td>${rule.type}</td>
+          <td>${rule.pattern}</td>
+        </tr>`;
+    }
+
+    function renderTable(rules, elementId) {
+      let ruleHTML = '';
+      rules.forEach(function(r) {
+        ruleHTML += renderRow(r);
+      });
+      $(elementId).html(ruleHTML);
+    }
+
+    var json = $.getJSON('/library/filters.json')
+      .done(data => {
+        renderTable(data.rules, '#lib-info');
+      }).fail(data => console.log(data));
+  }(jQuery));
+</script>
+
+<div>
+  <div class='library'>
+    <div class='row'>
+      <div class='col'>
+        <table class="table table-sm">
+          <tbody id='lib-info'>
+            <tr>
+              <th scope="row">TIMEOUT</th>
+              <td>REGEX</td>
+              <td>*Task timed out after*</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

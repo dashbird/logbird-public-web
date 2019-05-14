@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:image" content="/img/og-image.png"> 
-  <link rel="icon" href="/img/logbird.svg" />
+  <link rel="icon" href="/img/logbird.png" />
 
 
       
@@ -80,48 +80,58 @@
     </div>
     <div class="container">
       <div class="row full-screen d-flex align-content-center">
-
         <div class="col-md-12">
           <!-- animation -->
-            <div id="lottie" class=''></div>
-            <div class="d-none d-xl-block" style='margin-top: -180px;'>
-              <h1 class='text-center text-md-left m-0 mb-2'>Gateway for logs.</h1>
-              <p class='text-center text-md-left m-0'>Catch any event or metric. Trigger activity.</p>
-              <div class="app-btn-set m-0">
-                <a href="#contact-form" class="m-0 m-btn m-btn-theme" data-text="Free Trial">Sign up for early access</a>
-              </div>
-            </div>
+          <div id="lottie" class='' style='z-index: 1;'></div>
           <!-- / -->
+          <div class="d-none d-xl-block" style='position: relative; margin-top: -180px; z-index: 999;'>
+            <h1 class='text-center text-md-left m-0 mb-2'>Gateway for logs.</h1>
+            <p class='text-center text-md-left m-0'>Catch events from logs and trigger activity.</p>
+            <div class="app-btn-set m-0">
+              <a href="#contact-form" class="m-btn m-btn-theme" data-text="Free Trial">Sign up for early access</a>
+            </div>
+          </div>
         </div> <!-- col -->
 
         <div class='d-block d-xl-none col-12 mt-5'>
             <div class='mt-5'>
               <h1 class='text-center m-0 mb-2'>Gateway for logs.</h1>
-              <p class='text-center w-100 m-0 p-0 pb-4'>Catch any event or metric. Trigger activity.</p>
+              <p class='text-center w-100 m-0 p-0 pb-4'>Catch events from logs and trigger activity.</p>
               <div class="app-btn-set text-center">
                 <a href="#contact-form" class="m-btn m-btn-theme" data-text="Free Trial">Sign up for early access</a>
               </div>
             </div>
         </div>
-
       </div> <!-- row -->
     </div><!-- container -->
     <label class="mouse-icon"><span class="wheel"></span></label>
   </section>
   <!-- / -->
   <!-- Featre -->
+  <section id="feature" class="section gray-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto text-center section-title">
+          <h1>Not another log analytics service.</h1>
+          <p class='mt-4'><b>Logbird is a channel to track and move information using logs.</b> It can scalably process HUGE amounts of logs and extract the meaningful. You can use it to speed up and simplify applications.</p>
+          <a href='/docs/' target='_blank' class='btn btn-outline-primary w-25 d-block mx-auto'>Read more about it.</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="feature" class="section">
     <div class="container">
       <div class="row">
         <div class="col-12 mx-auto text-center section-title">
-          <h1>Logs to the moon.</h1>
+          <h1>Some use cases...</h1>
         </div>
       </div>
+
       <div class="row mt-5">
         <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center">
-          <h4>Catch issues from cloud services.</h4>
+          <h4>Detect issues from applications.</h4>
           <p class='mt-3 text-justify'>Track errors and events across all cloud services that produce logs. Set filters from curated & community-supported list of existing filters or create your own.</p>
-          <a href='/docs/rules/library/' class='btn btn-outline-primary w-50'>Filter library</a>
+          <!-- <a href='/docs/rules/library/' class='btn btn-outline-primary w-50'>Filter library</a> -->
         </div> <!-- col -->
         <div class="col-12 col-md-6 mx-auto">
           <div class='d-flex mb-2'>
@@ -172,7 +182,7 @@
       </div> <!-- row -->
       <div class="row m-100px-t">
         <div class="col-12 col-md-6 d-block d-md-none text-center justify-content-start justify-content-md-center pt-3">
-          <h4>Track business events.</h4>
+          <h4>Move info between apps.</h4>
           <p class='mt-3 text-justify'>Log out events that are meaningful to your business. Sales and marketing teams will decide for themselves where to take it.</p>
         </div>
         <div class="col-12 col-md-6">
@@ -230,14 +240,14 @@
           </div>
         </div>
         <div class="col-12 col-md-6 d-none d-md-block text-center justify-content-start justify-content-md-center pt-3">
-          <h4>Track business events.</h4>
+          <h4>Move info between apps.</h4>
           <p class='mt-3 text-justify'>Log out events that are meaningful to your business. Sales and marketing teams will decide for themselves where to take it.</p>
         </div>
       </div> <!-- row -->
       <div class="row m-100px-t">
         <div class="col-12 col-md-6 text-center justify-content-start justify-content-md-center pt-3">
-          <h4>Start background jobs.</h4>
-          <p class='mt-3 text-justify'>Trigger asynchronous tasks on the background to keep your code clean and speed up code executions.</p>
+          <h4>Start application flows.</h4>
+          <p class='mt-3 text-justify'>Start compute tasks on the background and keep your code clean and speed up code executions.</p>
         </div>
         <div class="col-12 col-md-6">
           <div class='d-flex mb-2'>
@@ -284,7 +294,7 @@
           </div>
         </div>
       </div> <!-- row -->
-    <div class="row mt-80 d-none">
+    <div class="row mt-80">
       <div class="col-12 mx-auto text-center section-title">
         <h3>...or anything else you can imagine.</h3>
       </div>
@@ -578,7 +588,6 @@
   <!-- / -->
 </main>
 <!-- Main End -->
-+++
 
 
         
@@ -629,6 +638,7 @@
        
   <script src="/js/jquery-3.2.1.min.js"></script>
   <script src="/js/jquery-migrate-3.0.0.min.js"></script>
+
 
   
   <script src="/plugin/bootstrap/js/popper.min.js"></script>

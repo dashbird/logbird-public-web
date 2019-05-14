@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/assets/css/vendor.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
     <link rel="icon" href="/img/logbird.png" />
 
     <title>{{ .Title }} - Logbird Documentation</title>
   </head>
   <body data-spy="scroll" data-target="#toc">
+    {{ partial "docs-scripts.html" . }}
     <section class="py-0">
       <div class="container-fluid">
         <div class="row justify-content-between">
