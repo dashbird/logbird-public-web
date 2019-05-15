@@ -1,15 +1,4 @@
 {
-  "filters": [
-    {
-      "name": "AWS Lambda Errors",
-      "tags": ["AWS", "Lambda"],
-      "rules": ["aws-lambda-timeout", "aws-lambda-early-exit", "aws-lambda-out-of-memory"]
-    },{
-      "name": "Node.js errors",
-      "tags": ["Node.js"],
-      "rules": ["node-error", "basic-node-error"]
-    }
-  ],
   "rules": [
     {
       "id": "aws-lambda-timeout",
