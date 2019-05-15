@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://logbird.io/docs/triggers/adding-an-sns-channel/</loc>
+    <lastmod>2019-05-10T13:21:42+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://logbird.io/docs/rules/configuring-rules/</loc>
     <lastmod>2019-05-10T13:21:42+03:00</lastmod>
   </url>
@@ -36,6 +41,12 @@
   
   <url>
     <loc>https://logbird.io/categories/crules/</loc>
+    <lastmod>2019-05-10T13:21:42+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://logbird.io/categories/dtriggers/</loc>
     <lastmod>2019-05-10T13:21:42+03:00</lastmod>
     <priority>0</priority>
   </url>

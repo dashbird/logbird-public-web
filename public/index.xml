@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Adding an SNS channel</title>
+      <link>https://logbird.io/docs/triggers/adding-an-sns-channel/</link>
+      <pubDate>Fri, 10 May 2019 13:21:42 +0300</pubDate>
+      
+      <guid>https://logbird.io/docs/triggers/adding-an-sns-channel/</guid>
+      <description>Creating an SNS topic Logbird allows publishing to public and private SNS topics.
+Granting Logbird access to trigger private SNS topic To grant Logbird access to the SNS topic, add Logbird AWS account (423847353785) to the allowed AWS accounts.
+When creating a new topic If you want to create a new SNS topic, just add the Logbird AWS account under specified AWS accounts in Access policy: When editing an existing topic When editing the SNS topic, add to the access policy Statement array, and make sure to replace the sns ARN with your correct region, account id and topic name:</description>
+    </item>
+    
+    <item>
       <title>Configuring Rules</title>
       <link>https://logbird.io/docs/rules/configuring-rules/</link>
       <pubDate>Fri, 10 May 2019 13:21:42 +0300</pubDate>
@@ -26,7 +37,7 @@
       <pubDate>Fri, 10 May 2019 13:21:42 +0300</pubDate>
       
       <guid>https://logbird.io/docs/rules/rule-library/</guid>
-      <description>   Name Pattern Example line   </description>
+      <description>(function($){ function renderRow(rule) { return ` ${rule.service} ${rule.name} ${rule.type} ${rule.pattern} `; } function renderTable(rules, elementId) { let ruleHTML = &#39;&#39;; rules.forEach(function(r) { ruleHTML += renderRow(r); }); $(elementId).html(ruleHTML); } var json = $.getJSON(&#39;/library/filters.json&#39;) .done(data = { renderTable(data.rules, &#39;#lib-info&#39;); }).fail(data = console.log(data)); }(jQuery));           </description>
     </item>
     
   </channel>
