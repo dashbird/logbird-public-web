@@ -96,6 +96,28 @@ json
 json accountId, accountName as id, name
 ```
 
+## Where
+
+It is possible to filter based on captured groups.
+
+Available operators are: `=`, `<>`, `<=`, `>=`, `<`, `>`
+
+For comparing strings use quotes `field = "value"`
+
+Syntax:
+
+```
+| where <boolean expression>
+```
+
+Examples:
+
+```
+| where foo = "bar"
+| where status = 200
+| where size < 30
+```
+
 ## Fields
 
 Fields are capture groups from the parsed results. If you don't need all of them, then you can filter them.
