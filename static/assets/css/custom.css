@@ -1,3 +1,28 @@
 .table-sm td, .table-sm th {
   padding: 5px !important;
 }
+.logo { margin-right: 5px; }
+.service { color: gray; margin-right: 5px; display: inline-block; }
+.query { 
+  color: gray;
+  margin-top: 7px;
+  background: #f2f2f2;
+  margin-bottom: 0;
+}
+.rule { 
+  /* border-bottom: 1px solid #c4c4c4; */
+  /* border-top: 1px solid #ededed; */
+}
+
+.badge-lang {
+  background-color: transparent;
+  color: gray;
+  border: 1px solid gray;
+}
+.mainline {
+  vertical-align: bottom;
+}
+.p-lang { padding: 5px 10px; }
+.btn-icon { width: 24px; margin-right: 10px; }
+
+.value .btn-icon { margin-right: 0px; margin-left: 10px;}

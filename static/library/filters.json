@@ -1,42 +1,53 @@
 {
+  "services": [
+    { 
+      "id": 1,
+      "name": "AWS Lambda",
+      "logo": "/img/icons/lambda.png"
+    }, { 
+      "id": 10,
+      "name": "Node.js",
+      "logo": "/img/icons/nodejs.png"
+    }
+  ],
+  "languages": [
+    {
+      "id": 1,
+      "name": "Logbird Query"
+    }
+  ],
   "rules": [
     {
-      "id": "aws-lambda-timeout",
-      "service": "AWS Lambda",
-      "name": "TIMEOUT",
-      "type": "REGEX",
-      "pattern": "/[^\\s]{2}\\sTask timed out after/"
+      "id": 1,
+      "serviceId": 1,
+      "langId": 1,
+      "name": "timeout",
+      "pattern": "*Task timed out after*"
     },{
-      "id": "aws-lambda-early-exit",
-      "service": "AWS Lambda",
-      "name": "EARLY_EXIT",
-      "type": "REGEX",
-      "pattern": "/[^\\s]{2}\\sProcess exited before completing request/"
+      "id": 2,
+      "serviceId": 1,
+      "langId": 1,
+      "name": "early exit",
+      "pattern": "*Process exited before completing request*"
     },{
-      "id": "aws-lambda-out-of-memory",
-      "service": "AWS Lambda",
-      "name": "OUT_OF_MEMORY",
-      "type": "GLOB",
-      "pattern": "REPORT * | 'Memory Size: *' 'Max Memory Used: *' | memSize, memUsed | where memSize == memUsed"
+      "id": 3,
+      "serviceId": 1,
+      "langId": 1,
+      "name": "out of memory",
+      "pattern": "REPORT * \n| parse \"Memory Size: * MB Max Memory Used: * MB\" as memSize, memUsed \n| where memSize<=memUsed"
     }, {
-      "id": "aws-lambda-out-of-memory",
-      "service": "AWS Fargate",
-      "name": "test",
-      "type": "GLOB",
-      "pattern": "REPORT * | 'Memory Size: *' 'Max Memory Used: *' | memSize, memUsed | where memSize == memUsed"
-
-    },{
-      "id": "node-error",
+      "id": 4,
+      "serviceId": 10,
+      "langId": 1,
       "service": "Node.js",
-      "name": "ERROR",
-      "type": "GLOB",
-      "pattern": "Syntax error in module*"
+      "name": "error",
+      "pattern": "*Syntax error in module*"
     },{
-      "id": "basic-node-error",
-      "service": "Node.js",
-      "name": "BASIC_ERROR",
-      "type": "GLOB",
-      "pattern": "*Task timed out*"
+      "id": 4,
+      "serviceId": 10,
+      "langId": 1,
+      "name": "crash",
+      "pattern": "*errorMessage*stackTrace* \n| parse \"* * *\" as time, requestId, error \n| json field=error \n| fields errorType"
     }
   ]
 }

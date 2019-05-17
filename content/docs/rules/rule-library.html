@@ -5,33 +5,18 @@ linktitle: "Library of rules"
 description: 'Library of rules'
 categories: ["CRules"]
 ---
-<script type='text/javascript'>
-  (function($){
-    function renderRow(rule) {
-      return `<tr>
-          <th>${rule.service}</th>
-          <th>${rule.name}</th>
-          <td>${rule.type}</td>
-          <td>${rule.pattern}</td>
-        </tr>`;
-    }
-
-    function renderTable(rules, elementId) {
-      let ruleHTML = '';
-      rules.forEach(function(r) {
-        ruleHTML += renderRow(r);
-      });
-      $(elementId).html(ruleHTML);
-    }
-
-    var json = $.getJSON('/library/filters.json')
-      .done(data => {
-        renderTable(data.rules, '#lib-info');
-      }).fail(data => console.log(data));
-  }(jQuery));
-</script>
-
 <div>
+  <div class="dropdown">
+    <button class="btn dropdown-toggle btn-outline-primary p-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select Service<span class='value'></span>
+    </button>
+    <div id="service-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    </div>
+  <a target='_blank' class='btn btn-outline-secondary btn-sm float-right'>
+    <img src='/img/icons/github.svg' class='btn-icon' />
+    Contribute
+  </a>
+  </div>
   <div class='library'>
     <div class='row'>
       <div class='col'>
@@ -39,11 +24,10 @@ categories: ["CRules"]
     </div>
     <div class='row'>
       <div class='col'>
-        <table class="table table-sm">
-          <tbody id='lib-info'>
-          </tbody>
-        </table>
+        <div id='lib-info'>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<script src="/js/library.js"></script>
