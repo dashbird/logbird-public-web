@@ -1,5 +1,6 @@
 (function ($){
-  const remoteJSON = 'https://raw.githubusercontent.com/dashbird/filters/master/filters.json'
+  const remoteLocation = 'https://raw.githubusercontent.com/dashbird/filters/master/'
+  const filtersJSON = 'filters.json'
   const localJSON = '/library/filters.json'
   let rules, services, languages
 
@@ -50,7 +51,7 @@
     })
     $(elementId).html(servicesHTML)
   }
-  $.getJSON(remoteJSON)
+  $.getJSON(`${remoteLocation}${filtersJSON}`)
     .done(data => {
       services = data.services
       languages = data.languages
