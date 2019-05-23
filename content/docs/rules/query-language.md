@@ -35,7 +35,7 @@ report *
 *duration*
 // Matches all lines including word duration
 
-test*
+*test
 // Matches all lines ending with "test"
 ```
 ## Parsing
