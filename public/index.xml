@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Creating Filters</title>
+      <link>https://logbird.io/docs/filters/creating-filters/</link>
+      <pubDate>Mon, 27 May 2019 13:40:23 +0300</pubDate>
+      
+      <guid>https://logbird.io/docs/filters/creating-filters/</guid>
+      <description>Creating a filter After you have loaded your logs into Logbird by configuring a collector you will need to create a Filter to on the log sources to see relevant events.
+Logbird allows creating filters from scratch or a predefined template.
+Each filter specifies a set of rules to filter the logs by and also the log sources - which are the logs you want this filter to be applied to.</description>
+    </item>
+    
+    <item>
       <title>Adding an SNS channel</title>
       <link>https://logbird.io/docs/triggers/adding-an-sns-channel/</link>
       <pubDate>Fri, 10 May 2019 13:21:42 +0300</pubDate>
@@ -23,21 +34,23 @@ When creating a new topic If you want to create a new SNS topic, just add the Lo
     </item>
     
     <item>
-      <title>Configuring Rules</title>
-      <link>https://logbird.io/docs/rules/configuring-rules/</link>
-      <pubDate>Fri, 10 May 2019 13:21:42 +0300</pubDate>
-      
-      <guid>https://logbird.io/docs/rules/configuring-rules/</guid>
-      <description>Logbird allows you to create flexible log queries, which supports picking values (from words and JSONs) found in log lines. To find the correct log line, the query can start with an asterisk (*) to find the correct line position, check examples. If it doesn&amp;rsquo;t start with the asterisk, the log line must start exactly like the query starts. So if query starts with payment then the log line must start with payment.</description>
-    </item>
-    
-    <item>
       <title>Library of rules</title>
       <link>https://logbird.io/docs/rules/rule-library/</link>
       <pubDate>Fri, 10 May 2019 13:21:42 +0300</pubDate>
       
       <guid>https://logbird.io/docs/rules/rule-library/</guid>
-      <description>(function($){ function renderRow(rule) { return ` ${rule.service} ${rule.name} ${rule.type} ${rule.pattern} `; } function renderTable(rules, elementId) { let ruleHTML = &#39;&#39;; rules.forEach(function(r) { ruleHTML += renderRow(r); }); $(elementId).html(ruleHTML); } var json = $.getJSON(&#39;/library/filters.json&#39;) .done(data = { renderTable(data.rules, &#39;#lib-info&#39;); }).fail(data = console.log(data)); }(jQuery));           </description>
+      <description> Select Service   Contribute           </description>
+    </item>
+    
+    <item>
+      <title>Query language</title>
+      <link>https://logbird.io/docs/rules/query-language/</link>
+      <pubDate>Fri, 10 May 2019 13:21:42 +0300</pubDate>
+      
+      <guid>https://logbird.io/docs/rules/query-language/</guid>
+      <description>Logbird Query Language Query language is powerful way to parse your log lines and capture data for your events.
+It is possible to pipe multiple parsers together and pick only the result you need.
+// foo walks into a bar {&amp;quot;foo&amp;quot;:&amp;quot;bar&amp;quot;,&amp;quot;abc&amp;quot;:&amp;quot;xyz&amp;quot;} *walks* | parse &amp;quot;bar *&amp;quot; as data | json field=data abc | fields abc // abc: xyz  Matching It is possible to match any log line using wildcards.</description>
     </item>
     
   </channel>

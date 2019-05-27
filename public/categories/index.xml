@@ -6,22 +6,22 @@
     <description>Recent content in Categories on Logbird - Gateway for logs.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2019 13:40:23 +0300</lastBuildDate>
     
 	<atom:link href="https://logbird.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Abasics</title>
-      <link>https://logbird.io/categories/abasics/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
+      <title>BFilters</title>
+      <link>https://logbird.io/categories/bfilters/</link>
+      <pubDate>Mon, 27 May 2019 13:40:23 +0300</pubDate>
       
-      <guid>https://logbird.io/categories/abasics/</guid>
+      <guid>https://logbird.io/categories/bfilters/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Crules</title>
+      <title>CRules</title>
       <link>https://logbird.io/categories/crules/</link>
       <pubDate>Fri, 10 May 2019 13:21:42 +0300</pubDate>
       
@@ -30,11 +30,20 @@
     </item>
     
     <item>
-      <title>Dtriggers</title>
+      <title>DTriggers</title>
       <link>https://logbird.io/categories/dtriggers/</link>
       <pubDate>Fri, 10 May 2019 13:21:42 +0300</pubDate>
       
       <guid>https://logbird.io/categories/dtriggers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ABasics</title>
+      <link>https://logbird.io/categories/abasics/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://logbird.io/categories/abasics/</guid>
       <description></description>
     </item>
     

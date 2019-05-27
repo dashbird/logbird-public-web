@@ -3,7 +3,6 @@ title: "Creating Filters"
 date: 2019-05-27T13:40:23+03:00
 linktitle: "Creating Filters"
 description: 'Creating Filters'
-draft: true
 categories: ["BFilters"]
 ---
 
