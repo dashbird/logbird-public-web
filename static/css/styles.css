@@ -617,14 +617,25 @@ img {
   background: #fff;
 }
 
-.header-nav .navbar-brand {
-  color: #fff !important;
+.navbar.header-nav .navbar-brand,
+.navbar.header-nav .navbar-brand:hover {
+  color: white;
   font-weight: 700;
   position: relative;
   font-size: 20px;
   letter-spacing: 0.5px;
   padding: 0;
 }
+
+.navbar.fixed-header.header-nav .navbar-brand {
+  color: #22417a;
+  font-weight: 700;
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding: 0;
+}
+
 .header-nav .navbar-brand img { 
   max-height: 40px;
   margin-right: 0px;
