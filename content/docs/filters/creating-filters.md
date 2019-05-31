@@ -10,7 +10,7 @@ categories: ["BFilters"]
 
 After you have loaded your logs into Logbird by configuring a collector you will need to create a Filter to on the log sources to see relevant events.
 
-Logbird allows creating filters from scratch or a predefined template.
+Logbird allows creating filters from scratch or from a predefined template.
 
 ![creating filter](/img/docs/create-new-filter.png "Create a new filter")
 
@@ -24,7 +24,7 @@ After the filter is created you will be able to add rules and log sources:
 
 Click on 'Add rule' button next to 'Rules'.
 
-For instuctions on how to configure a rule, please consult <a href='/docs/rules/rule-library/' target='_blank'>rules documentation</a> 
+For instructions on how to configure a rule, please consult <a href='/docs/rules/rule-library/' target='_blank'>rules documentation</a> 
 
 ### Adding a log source
 
