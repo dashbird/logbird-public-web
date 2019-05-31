@@ -8,14 +8,14 @@ categories: ["DTriggers"]
 
 ## Trigger Response Data Model
 
-When the rule with trigger enabled will receive any events that match the rule, the trigger will be activated and depending on the type of the trigger you will receive different notifcations. Currently, the only supported trigger type is SNS trigger.
+When the rule with trigger enabled will receive any events that match the rule, the trigger will be activated and depending on type of the trigger you will receive different notifications. Currently, the only supported trigger type is SNS trigger.
 
 
 ## SNS trigger
 
 Sends SNS notification with JSON as a string.
 
-For general guide on SNS event structure please refer to [AWS SNS docs](https://docs.aws.amazon.com/sns/) .
+For general guide on SNS event structure please refer to [AWS SNS docs](https://docs.aws.amazon.com/sns/).
 
 
 #### Response Elements
@@ -24,7 +24,7 @@ For general guide on SNS event structure please refer to [AWS SNS docs](https://
 </style>
 
 <br/>
-`source` Specifies a single log group that acts as the source of the event. An event can come either from a Cloudwatch log group or from your API logs.
+`source` Specifies a single log group that acts as the source of the event. An event can come either from a CloudWatch log group or from your API logs.
 
 *Type*: Object
 
@@ -102,7 +102,7 @@ For general guide on SNS event structure please refer to [AWS SNS docs](https://
 
 ​		*Type*: String
 
-​		`groups` If any of the rules matched a pattern and produced a result it will be return in the groups object.
+​		`groups` If any of the rules matched a pattern and produced a result it will be returned in the groups object.
 
 ​		*Type*: Object
         <div class="indentLeft">

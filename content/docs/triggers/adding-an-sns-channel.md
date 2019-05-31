@@ -15,11 +15,15 @@ Logbird allows publishing to public and private SNS topics.
 To grant Logbird access to the SNS topic, add Logbird AWS account (423847353785) to the allowed AWS accounts.
 
 #### When creating a new topic
+
 If you want to create a new SNS topic, just add the Logbird AWS account under specified AWS accounts in `Access policy`:
+
 ![creating sns](/img/docs/sns-topic-creating-logbird-access.png "Adding Logbird account when creating SNS topic")
 
 #### When editing an existing topic
+
 When editing the SNS topic, add to the access policy Statement array, and make sure to replace the sns ARN with your correct region, account id and topic name:
+
 ```
     {
       "Sid": "__console_pub_0",
