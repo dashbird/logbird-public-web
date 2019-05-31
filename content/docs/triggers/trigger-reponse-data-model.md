@@ -1,14 +1,14 @@
 ---
-title: "Trigger Reponse Data Model"
+title: "Trigger Response Data Model"
 # date: 2019-05-30T16:34:24+03:00
-linktitle: "Trigger Reponse Data Model"
-description: 'Trigger Reponse Data Model'
+linktitle: "Trigger Response Data Model"
+description: 'Trigger Response Data Model'
 categories: ["DTriggers"]
 ---
 
-## Trigger Reponse Data Model
+## Trigger Response Data Model
 
-When the rule with trigger enabled will receive any events that match the rule, the trigger will be activated and depending on the type of the trigger you will receive different notifcations. Curently, the only supported trigger type is SNS trigger.
+When the rule with trigger enabled will receive any events that match the rule, the trigger will be activated and depending on the type of the trigger you will receive different notifcations. Currently, the only supported trigger type is SNS trigger.
 
 
 ## SNS trigger
