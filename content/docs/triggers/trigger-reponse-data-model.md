@@ -137,7 +137,7 @@ Contents of sample response from Logbird:
         "id": "dummy_id",
         "name": "Email received",
         "type": "ql",
-        "pattern": "*Email received*\n| parse \"recevied *\" as meta\n| json field=meta sender.email, body.subject as email, subject\n| fields email, subject"
+        "pattern": "*Email received*\n| parse \"received *\" as meta\n| json field=meta sender.email, body.subject as email, subject\n| fields email, subject"
     },
     "event": {
         "hash": "dummy_event_id",
