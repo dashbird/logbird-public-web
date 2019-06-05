@@ -1,0 +1,308 @@
+---
+title: "Logbird - Gateway for logs."
+date: 2019-05-09T12:27:00+03:00
+---
+<main>
+  <!-- Home Banner Start -->
+  <section id="home" class="home-banner theme-bg">
+  <!-- <section id="home" class=" theme-bg"> -->
+  <div class="particles-js-canvas-el"></div>
+    <div class="hb-top">
+      <img class="up-down" src="/img/body-bg.svg" title="" alt="">
+    </div>
+    <div class="container">
+      <div class="row full-screen d-flex align-content-center">
+        <div class="col-md-12">
+          <!-- animation -->
+          <div id="lottie" class='' style='z-index: 1;'></div>
+          <!-- / -->
+          <div class="d-none d-xl-block" style='position: relative; margin-top: -180px; z-index: 999;'>
+            <h1 class='text-center text-md-left m-0 mb-2'>Post-processor for <br> cloud logs.</h1>
+            <p class='text-center text-md-left m-0'>Query log streams. Trigger activity.</p>
+            <div class="app-btn-set m-0">
+              <a href="https://app.logbird.io" class="m-btn m-btn-theme" data-text="Free Trial">Get Started Free</a>
+            </div>
+          </div>
+        </div> <!-- col -->
+        <div class='d-block d-xl-none col-12 mt-5'>
+          <div class='mt-5'>
+            <h1 class='text-center m-0 mb-2'>Catch events from<br> log streams.</h1>
+            <p class='text-center w-100 m-0 p-0 pb-4'>Query log streams. Trigger activity.</p>
+            <div class="app-btn-set text-center">
+              <a href="https://app.logbird.io" class="m-btn m-btn-theme" data-text="Free Trial">Get Started Free</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div><!-- container -->
+    <label class="mouse-icon"><span class="wheel"></span></label>
+  </section>
+  <!-- / -->
+  <!-- Feature -->
+  <section id="feature" class="section gray-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto text-center section-title">
+          <h1>Central post-processor for cloud logs.</h1>
+          <p>In modern app development, we use a lot on managed services. In one action, a user can touch tens of different services (like API Gateway, Lambda, Auth0, Aurora, Twilio etc). Logbird processes log streams from all of those services to extract events that you can track and trigger actions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="feature" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto text-center section-title">
+          <h1>Endless possibilities, at scale.</h1>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center">
+          <h4>Detect application events.</h4>
+          <p class='mt-3 text-justify'>Catch errors and custom events across all services that log out activity. You can choose from a list of community curated filters to get going fast and cover all known services.</p>
+          <a href='/docs/rules/rule-library/' class='btn btn-outline-primary w-50' target='_blank'>See The Community Filters</a>
+        </div> <!-- col -->
+        <div class="col-12 col-md-6 mx-auto">
+          <div class='d-flex mb-2'>
+            <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+              <div class='d-none d-md-block'><img src='/img/icons/lambda.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>TIMEOUT</b> in <u>get-user-info</u> Lambda.
+                <span class='log'>Task timed out after 60.1 seconds.</span>
+              </div>
+              <img class='d-md-none target' src='/img/icons/sns.png'>
+            </div>
+            <div class='d-none d-md-flex'>
+              <img class='arrow' src='/img/icons/arrow.svg'>
+              <img class='target' src='/img/icons/sns.png'>
+            </div>
+          </div>
+          <div class='d-flex mb-2'>
+            <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+              <div class='d-none d-md-block'><img src='/img/icons/ecs.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>FileNotFoundException</b> in <u>prod-instance</u> ECS.
+                <span class='l d-block'>FileNotFoundException: Error occurred in line 85...</span>
+              </div>
+              <img src='/img/bar-chart.png'>
+            </div>
+          </div>
+          <div class='d-flex mb-2'>
+            <div class='notification blue d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+              <div class='d-none d-md-block'><img src='/img/icons/aurora.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <span class='h'><b>Slow query</b> in <u>users-prod-table</u> Aurora.</span>
+                <span class='l d-block'>Request took more than 1.5 seconds to finish.</span>
+              </div>
+              <img src='/img/bar-chart.png'>
+            </div>
+          </div>
+          <div class='d-flex mb-2'>
+            <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+              <div class='d-none d-md-block'><img src='/img/icons/appsync.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>Incorrect return type</b> in <u>Users</u> AppSync API.
+                <span class='l d-block'>Can't resolve value (/users): type mismatch err..</span>
+              </div>
+              <img src='/img/bar-chart.png'>
+            </div>
+          </div>
+        </div> <!-- col -->
+      </div> <!-- row -->
+      <div class="row m-100px-t">
+        <div class="col-12 col-md-6 d-block d-md-none text-center justify-content-start justify-content-md-center pt-3">
+          <h4>Track and move data.</h4>
+          <p class='mt-3 text-justify'>Log out and events that are meaningful to your business for processing in Logbird. Sales and marketing teams can automate workflows or analyze them in real-time.</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class='d-flex mb-2'>
+            <div class='notification green d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+              <div class='d-none d-md-block'><img src='/img/icons/custom.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>Sales lead:</b> David from <u>Chimp Inc</u>.
+                <span class='log'>sql { name: 'David Bowie', phone: '+1 443...</span>
+              </div>
+              <img class='d-md-none target' src='/img/icons/email.png'>
+            </div>
+            <div class='d-none d-md-flex'>
+              <img class='arrow' src='/img/icons/arrow.svg'>
+              <img class='target' src='/img/icons/email.png'>
+            </div>
+          </div>
+          <div class='d-flex mb-2'>
+            <div class='notification green d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+              <div class='d-none d-md-block'><img src='/img/icons/shekel.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>Payment received</b> from <u>Banana Inc</u>.
+                <span class='log d-block'>payment { amount: '5000', currency: 'USD'...</span>
+              </div>
+              <img class='d-md-none target' src='/img/icons/slack.png'>
+            </div>
+            <div class='d-none d-md-flex'>
+              <img class='arrow' src='/img/icons/arrow.svg'>
+              <img class='target' src='/img/icons/slack.png'>
+            </div>
+          </div>
+          <div class='d-flex mb-2'>
+            <div class='notification yellow d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+              <div class='d-none d-md-block'><img src='/img/icons/custom.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>Signup</b> by <u>bobby@droptables.com</u>.
+                <span class='log'>signup { firstname: 'bobby', lastname: 'droptables'...</span>
+              </div>
+              <img class='target' src='/img/bar-chart.png'>
+            </div>
+          </div>
+          <div class='d-flex mb-2'>
+            <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+              <div class='d-none d-md-block'><img src='/img/icons/cancel.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>Subscription canceled </b> by <u>Pants Inc</u>.
+                <span class='log'>subscription canceled { guid: '19cgo..</span>
+              </div>
+              <img class='d-md-none target' src='/img/icons/webhook.png'>
+            </div>
+            <div class='d-none d-md-flex'>
+              <img class='arrow' src='/img/icons/arrow.svg'>
+              <img class='target' src='/img/icons/webhook.png'>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-none d-md-block text-center justify-content-start justify-content-md-center pt-3">
+          <h4>Track and move data.</h4>
+          <p class='mt-3 text-justify'>Log out and events that are meaningful to your business for processing in Logbird. Sales and marketing teams can automate workflows or analyze them in real-time.</p>
+        </div>
+      </div> <!-- row -->
+      <div class="row m-100px-t">
+        <div class="col-12 col-md-6 text-center justify-content-start justify-content-md-center pt-3">
+          <h4>Use it as an event source.</h4>
+          <p class='mt-3 text-justify'>Start tasks between different services on the background and keep your code clean while speeding up executions.</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class='d-flex mb-2'>
+            <div class='notification red d-flex flex-grow-1 text-truncate overflow-ellipsis'>
+              <div class='d-none d-md-block'><img src='/img/icons/ecs.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>Account deleted</b>, triggering cleanup.
+                <span class='log'>delete { company: 'Cartoon Networks', </span>
+              </div>
+              <img class='d-md-none target' src='/img/icons/lambda.png'>
+            </div>
+            <div class='d-none d-md-flex'>
+              <img class='arrow' src='/img/icons/arrow.svg'>
+              <img class='target' src='/img/icons/lambda.png'>
+            </div>
+          </div>
+          <div class='d-flex mb-2'>
+            <div class='notification blue d-flex flex-grow-1 text-truncate'>
+              <div class='d-none d-md-block'><img src='/img/icons/shekel.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>Successful transaction</b>, send email.
+                <span class='log'>payment { amount: '5000', currency: 'USD'</span>
+              </div>
+              <img class='d-md-none target' src='/img/icons/ses.png'>
+            </div>
+            <div class='d-none d-md-flex'>
+              <img class='arrow' src='/img/icons/arrow.svg'>
+              <img class='target' src='/img/icons/ses.png'>
+            </div>
+          </div>
+          <div class='d-flex'>
+            <div class='notification red d-flex flex-grow-1 text-truncate'>
+              <div class='d-none d-md-block'><img src='/img/icons/cancel.png'></div>
+              <div class='ml-1 text-truncate flex-grow-1'>
+                <b>Image uploaded</b>, triggering resize.
+                <span class='log'>image { src: '/images..</span>
+              </div>
+              <img class='target d-md-none' src='/img/icons/sns.png'>
+            </div>
+            <div class='d-none d-md-flex'>
+              <img class='arrow' src='/img/icons/arrow.svg'>
+              <img class='target' src='/img/icons/sns.png'>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    <div class="row mt-80">
+      <div class="col-12 mx-auto text-center section-title">
+        <a href='https://app.logbird.io' target='_blank' class='btn btn-primary '>Get Started Free</a>
+        <a href='/docs/' target='_blank' class='btn btn-outline-primary ml-3'>Read The Docs</a>
+      </div>
+    </div>
+    </div> <!-- container -->
+  </section>
+  <!-- / -->
+  <!-- Featre -->
+  <section id="feature" class="section gray-bg">
+    <div class="container">
+      <div class="row m-45px-b md-m-25px-b">
+        <div class="col-12 col-md-6">
+          <div>
+            <h2>From...</h2>
+              <div class='d-flex align-middle ml-4'>
+                <img class='source' src='/img/icons/cloudwatch.png'>
+                <div class='my-auto'>
+                  <b>AWS CloudWatch</b>
+                </div>
+              </div>
+              <div class='d-flex align-middle mt-5 ml-4'>
+                <img class='source' src='/img/icons/fluentd.png'>
+                <div class='my-auto'>
+                </div>
+              </div>
+          </div>
+        </div> <!-- col -->
+        <div class="col-12 col-md-6 mt-5 mt-md-0">
+          <div>
+            <h2>to...</h2>
+              <div class='d-flex align-middle ml-4'>
+                <img class='source' src='/img/icons/sns.png'>
+                <div class='my-auto'>
+                  <b>AWS Simple Notification Service</b>
+                </div>
+              </div>
+              <div class='d-flex align-middle ml-4 mt-4'>
+                <img class='source' src='/img/icons/email.png'>
+                <div class='my-auto'>
+                  <b>Email</b> - coming soon.
+                </div>
+              </div>
+              <div class='d-flex align-middle ml-4 mt-4'>
+                <img class='source' src='/img/icons/slack.png'>
+                <div class='my-auto'>
+                  <b>Slack</b> - coming soon.
+                </div>
+              </div>
+              <div class='d-flex align-middle ml-4 mt-4'>
+                <img class='source' src='/img/icons/webhook.png'>
+                <div class='my-auto'>
+                  <b>Webhooks</b> - coming soon.
+                </div>
+              </div>
+          </div>
+        </div> <!-- col -->
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+  <!-- / -->
+
+  <!-- Featre -->
+  <section id="feature" class="section">
+    <div class="container">
+      <div class="row md-m-25px-b">
+        <div class="col-12">
+          <div class="text-center">
+            <h2 class='mb-5'>Get going in a few minutes with automatic setup.</h2>
+            <div style='margin-top:60px;'>
+              <a href='https://app.logbird.io' target='_blank' class='btn btn-primary '>Get Started Free</a>
+              <a href='/docs/' target='_blank' class='btn btn-outline-primary ml-3'>Read The Docs</a>
+            </div>
+         </div>
+        </div> <!-- col -->
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+  <!-- / -->
+
+</main>
+<!-- Main End -->

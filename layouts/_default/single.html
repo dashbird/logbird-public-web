@@ -8,8 +8,9 @@
   <body>
     <div class='background-gradient-bottom'>
       {{ partial "header.html" . }}
-      {{ block "main" . }}{{ end }}
+      {{ .Content }}
       {{ partial "footer.html" . }}
     </div>
+    {{ partial "scripts.html" . }}
   </body>
 </html>
