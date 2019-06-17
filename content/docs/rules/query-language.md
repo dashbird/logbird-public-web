@@ -16,7 +16,7 @@ It is possible to pipe multiple parsers together and pick only the result you ne
 ```
 // foo walks into a bar {"foo":"bar","abc":"xyz"}
 
-*walks*
+walks
 | parse "bar *" as data
 | json field=data abc
 | fields abc
@@ -26,18 +26,28 @@ It is possible to pipe multiple parsers together and pick only the result you ne
 
 ## Matching
 
-It is possible to match any log line using wildcards. That can be only as first part of the query and it won't have any capture groups as result.
+It is possible to match any log line using complex query or just simple words. That can be only as first part of the query and it won't have any capture groups as result.
 
 ```
-report *
-// Matches all lines starting with "report "
-
-*duration*
-// Matches all lines including word duration
-
-*test
-// Matches all lines ending with "test"
+keyword AND keyword OR keyword NOT keyword
+*keyword*
+"This is a phrase"
 ```
+
+```
+report
+// Matches all lines including word "report"
+
+("billed duration" and end) or error
+// Matches all lines including phrase "billed duration" and "end" or "report"
+
+test and not unit
+// Matches all lines including with "test" and ignoring with "unit"
+
+foo bar xyz
+// Matches all lines including all these words
+```
+
 ## Parsing
 
 ### Anchor
